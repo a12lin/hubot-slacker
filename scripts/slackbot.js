@@ -19,15 +19,15 @@
 //
 
 module.exports = function(robot) {
-  /*
-  robot.respond(/Hello!/, function(res) {
-    return res.send("Hi there!");
-  });
-  robot.respond(/Bonjour!/, function(res) {
-   return res.reply("Guten tag!");
-  });
-  */
 
+  // INSPIRE ME
+  robot.respond(/Inspire me/, function(msg) {
+    return msg.send("You are now inspired.");
+  });
+
+
+
+  // MOOD RESPONSE
   robot.hear(/I am feeling (.*)/, function(msg) {
     let fav;
     fav = msg.match[1];
@@ -63,6 +63,7 @@ module.exports = function(robot) {
 
 
 
+// ROBO COACH
 robot.respond(/Coach me/i, function(res) {
   var name, user;
   res.reply("You are all you need. I'll help you help yourself.");
@@ -99,7 +100,7 @@ robot.hear(/.*/i, function(msg) {
         break;
       case 5:
         user.options = answer;
-        msg.reply("Wow, you are full of good ideas! See what I mean when I said you are all you need? Now thinking about those ideas... What do you want to actually try out? What's your next step?");
+        msg.reply("Wow, you are full of good ideas! Now thinking about those ideas... What do you want to actually try out? What's your next step?");
         break;
       case 6:
         user.next = answer;
@@ -107,7 +108,7 @@ robot.hear(/.*/i, function(msg) {
     user.stage += 1;
     robot.brain.set(name, user);
     if (user.stage > 6) {
-      msg.reply("Excellent. So " + name + ", if I'm hearing you right, your next steps is " + user.next + "\n" + "Kudos for you for figuring this out! Clearly you don't need me anymore. Best of luck to you!" + "\n" + "https://img.buzzfeed.com/buzzfeed-static/static/2015-04/14/11/enhanced/webdr13/longform-original-13335-1429024178-4.jpg");
+      msg.reply("Excellent. So " + name + ", if I'm hearing you right, your next steps is " + user.next + "\n" + "Kudos for you for figuring this out! Clearly you don't need me anymore. Best of luck to you! - Your Friendly RoboCoach" + "\n" + "https://img.buzzfeed.com/buzzfeed-static/static/2015-04/14/11/enhanced/webdr13/longform-original-13335-1429024178-4.jpg");
       return robot.brain.remove(name);
     }
   }
