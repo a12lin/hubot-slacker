@@ -22,7 +22,7 @@ module.exports = function(robot) {
 
   // INSPIRE ME
   robot.respond(/Inspire me/, function(msg) {
-    return msg.send("You are now inspired.");
+    return msg.reply("You are now inspired.");
   });
 
 
@@ -42,22 +42,22 @@ module.exports = function(robot) {
     let demoralized_text = ["You are enough.", "Remember what you've already accomplished.", "Yes, you can.", "I believe in you!", "Remember that you are often your biggest critic.", "You are an amazing person."];
     let demoralized_img = ["https://www.audicus.com/wp-content/uploads/2015/01/audicus-hearing-aids-hearing-loss-exercise-depression-hans-and-franz.jpg", "https://img.buzzfeed.com/buzzfeed-static/static/2015-04/14/11/enhanced/webdr13/longform-original-13335-1429024178-4.jpg", "https://i.pinimg.com/originals/f5/5d/c1/f55dc1a87439039efb8c19a2cab66b02.jpg", "http://ww1.hdnux.com/photos/46/61/06/10162576/3/920x920.jpg"];
     if (fav === "happy") {
-      return msg.reply(msg.random(happy_img) + "\n" + msg.random(happy_text));
+      return msg.send(msg.random(happy_img) + "\n" + msg.random(happy_text));
     }
     else if (fav === "sad") {
-      return msg.reply(msg.random(sad_img) + "\n" + msg.random(sad_text));
+      return msg.send(msg.random(sad_img) + "\n" + msg.random(sad_text));
     }
     else if (fav === "angry") {
-      return msg.reply(msg.random(angry_img) + "\n" + msg.random(angry_text));
+      return msg.send(msg.random(angry_img) + "\n" + msg.random(angry_text));
     }
     else if (fav === "stressed") {
-      return msg.reply(msg.random(stressed_img) + "\n" + msg.random(stressed_text));
+      return msg.send(msg.random(stressed_img) + "\n" + msg.random(stressed_text));
     }
     else if (fav === "demoralized") {
-      return msg.reply(msg.random(demoralized_img) + "\n" + msg.random(demoralized_text));
+      return msg.send(msg.random(demoralized_img) + "\n" + msg.random(demoralized_text));
     }
     else {
-      return msg.reply("What does it mean to be " + fav + "?");
+      return msg.send("What does it mean to be " + fav + "?");
     }
   });
 
