@@ -35,10 +35,12 @@ module.exports = function(robot) {
   robot.hear(/I am feeling (.*)/, function(msg) {
     var fav;
     fav = msg.match[1];
-    var happy = ["I'm happy you're happy!", "Yeepee!", "Well isn't that nice.", "https://octodex.github.com/images/hubot.jpg"];
+    var happy_text = ["I'm happy you're happy!", "Yeepee!", "Well isn't that nice."];
+    var happy_img = ["https://octodex.github.com/images/hubot.jpg", "https://tctechcrunch2011.files.wordpress.com/2015/11/slackdroid_2x.png", "http://http://shipitsquirrel.github.io/images/squirrel.png"];
     var sad = ["I'm sad you're sad :(", "Don't worry, be happy!", "It's not you, it's me."];
     if (fav === "happy") {
-      return msg.reply(msg.random(happy));
+      return msg.reply(msg.random(happy_img));
+      return msg.reply(msg.random(happy_text));
     }
     else if (fav === "sad") {
       return msg.reply(msg.random(sad));
