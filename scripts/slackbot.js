@@ -22,7 +22,7 @@
 module.exports = function(robot) {
 
   // POSITIVE REINFORCEMENT
-  robot.respond(/Tell me I'm (.*)/i, function(msg) {
+  robot.respond(/\Tell me I'm (.*)\b/i, function(msg) {
     return msg.reply("You are most definitely " + msg.match[1] + "\n" + "When I think of the epitome of " + msg.match[1] + ", I think of you." + "\n" + "Don't let anyone tell you otherwise!");
   });
 
@@ -30,7 +30,7 @@ module.exports = function(robot) {
 
 
   // MOOD RESPONSE
-  robot.hear(/I am feeling (.*)/, function(msg) {
+  robot.hear(/\I am feeling (.*)\b/, function(msg) {
     let fav;
     fav = msg.match[1];
     let happy_text = ["I'm happy you're happy!", "You earned it!", "Keep it up!"];
