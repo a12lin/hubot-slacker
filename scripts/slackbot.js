@@ -8,9 +8,9 @@
 //   None
 //
 // Commands:
-//   hubot tell me I'm (.*) - Receive positive reinforcement that you are in fact (.*)
+//   hubot Tell me I'm (.*) - Receive positive reinforcement that you are in fact (.*)
 //   I am feeling (.*) - Get advice on how to deal with that feeling
-//   hubot coach me - Get a series of guiding questions that help you solve your problem
+//   hubot Coach me - Get a series of guiding questions that help you solve your problem
 //
 // Notes:
 //   None

@@ -14,7 +14,7 @@ We all doubt ourselves from time to time. Good thing you have Slacker to help yo
 ```
 @Slacker Tell me I'm ________
 ```
-Replace the blank with whatever adjective or descriptive noun you desperately need validation for. Smart? Interesting? Charming? Not a jerk? Batman? Whatever floats your boat. Slacker will respond with just the ego boost you need.
+Replace the blank with whatever adjective or descriptive noun you desperately need validation for. Smart? Interesting? Charming? Not a jerk? Batman? Whatever floats your boat. Slacker will reply with just the ego boost you need.
 
 > Note from Annie: I created this functionality by taking a wildcard from the user (the blank mentioned above) and having the bot reply to the user with a sentence that uses the wildcard.
 <br>
@@ -59,7 +59,7 @@ Slacker v.1 can do a lot, but it can't do everything. I'd like the future incarn
 <br><br>
 ***
 
-*Slacker is the creation of [Annie Lin](http://www.anniellin.com), who aspires to be the human equivalent of this robot.*
+*Slacker is the creation of [a12lin](https://github.com/a12lin), who aspires to be the human equivalent of this robot.*
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=q-9kPks0IfE" target="_blank"><img src="http://img.youtube.com/vi/q-9kPks0IfE/0.jpg" 
 alt="I'll Be There For You" width="240" height="180" border="5" /></a>
